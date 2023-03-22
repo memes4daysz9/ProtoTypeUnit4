@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
-    float speed = 300.0f;
+    float speed = 0.5f;
     private Rigidbody EnemyRB;
     private GameObject player;
     void Start()
@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnemyRB.AddForce((player.transform.position - transform.position) * speed);
+        Vector3 lookDirecton = (player.transform.position - transform.position).normalized; // ai momento numero dos
+        EnemyRB.AddForce(lookDirecton* speed);
+        if (transform.position.y < -10 ){Destroy(gameObject);}//kill enemy
     }
 }
