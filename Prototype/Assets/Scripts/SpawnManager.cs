@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public GameObject BossPrefab;
+    public GameObject PlayerBoi;
     private float spawnRange = 9;
     public int enemyCount;
     public int waveNumber = 1;
@@ -28,12 +29,15 @@ public class SpawnManager : MonoBehaviour
             }
             waveNumber = 1;
             waveMultiplier += 1;
+            
 
         }
 
         for (float i = 0; i < enemiesToSpawn; i++){
         Instantiate(enemyPrefab,GenerateSpawnPosition(),enemyPrefab.transform.rotation);
+        PlayerBoi.transform.position = new Vector3(0, 0, 0);
         }
+
         
 
     }

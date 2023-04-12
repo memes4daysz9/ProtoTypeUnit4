@@ -603,6 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4241817796192759875, guid: 0cede93aa32d7c04aa1698192ee94497, type: 3}
   BossPrefab: {fileID: 960899885251578014, guid: cad7cdcaf67b4324fb8afc7488a52bfb, type: 3}
+  PlayerBoi: {fileID: 1774653083}
   enemyCount: 0
   waveNumber: 1
   powerupPrefab: {fileID: 1280220116}
